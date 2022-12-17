@@ -296,6 +296,15 @@ class Camera: NSObject {
         }
     }
     
+    private func uploadToServer(_ photo: AVCapturePhoto) {
+        guard let rawData = photo.fileDataRepresentation() else { return }
+        
+        let image = UIImage(data: rawData)
+        let jpegData = image!.jpegData(compressionQuality: 0.8)!
+        
+        print(jpegData)
+    }
+    
     func takePhoto() {
         guard let photoOutput = self.photoOutput else { return }
         
@@ -323,6 +332,7 @@ class Camera: NSObject {
             }
             
             photoOutput.capturePhoto(with: photoSettings, delegate: self)
+            
         }
     }
 }
@@ -337,6 +347,7 @@ extension Camera: AVCapturePhotoCaptureDelegate {
         }
         
         addToPhotoStream?(photo)
+        uploadToServer(photo)
     }
 }
 

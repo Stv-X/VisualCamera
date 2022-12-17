@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA562143294DEED40049948F /* NetworkSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA562142294DEED40049948F /* NetworkSupport.swift */; };
 		AAC79C3A294DA094003E037C /* PhotoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC79C2C294DA093003E037C /* PhotoCollection.swift */; };
 		AAC79C3B294DA094003E037C /* PhotoAssetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC79C2D294DA093003E037C /* PhotoAssetCollection.swift */; };
 		AAC79C3C294DA094003E037C /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC79C2E294DA093003E037C /* PhotoLibrary.swift */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA562142294DEED40049948F /* NetworkSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupport.swift; sourceTree = "<group>"; };
+		AA562144294DFB840049948F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AAC79C2C294DA093003E037C /* PhotoCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollection.swift; sourceTree = "<group>"; };
 		AAC79C2D294DA093003E037C /* PhotoAssetCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAssetCollection.swift; sourceTree = "<group>"; };
 		AAC79C2E294DA093003E037C /* PhotoLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
@@ -76,9 +79,11 @@
 		AAF00E1B294B321E00D8CE69 /* VisualCamera */ = {
 			isa = PBXGroup;
 			children = (
+				AA562144294DFB840049948F /* Info.plist */,
 				AAF00E56294B37A300D8CE69 /* VisualCamera.entitlements */,
 				AAC79C35294DA094003E037C /* CachedImageManager.swift */,
 				AAC79C38294DA094003E037C /* Camera.swift */,
+				AA562142294DEED40049948F /* NetworkSupport.swift */,
 				AAC79C30294DA093003E037C /* CameraApp.swift */,
 				AAC79C31294DA093003E037C /* CameraView.swift */,
 				AAC79C36294DA094003E037C /* DataModel.swift */,
@@ -181,6 +186,7 @@
 				AAC79C3A294DA094003E037C /* PhotoCollection.swift in Sources */,
 				AAC79C3F294DA094003E037C /* CameraView.swift in Sources */,
 				AAC79C47294DA094003E037C /* ThumbnailView.swift in Sources */,
+				AA562143294DEED40049948F /* NetworkSupport.swift in Sources */,
 				AAC79C45294DA094003E037C /* ViewfinderView.swift in Sources */,
 				AAC79C44294DA094003E037C /* DataModel.swift in Sources */,
 				AAC79C3D294DA094003E037C /* PhotoAsset.swift in Sources */,
@@ -324,6 +330,7 @@
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VisualCamera/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
@@ -332,6 +339,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -364,6 +372,7 @@
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VisualCamera/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
@@ -372,6 +381,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
