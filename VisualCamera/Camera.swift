@@ -2,6 +2,7 @@ import AVFoundation
 import CoreImage
 import UIKit
 import os.log
+import UniformTypeIdentifiers
 
 class Camera: NSObject {
     
@@ -11,6 +12,8 @@ class Camera: NSObject {
     private var photoOutput: AVCapturePhotoOutput?
     private var videoOutput: AVCaptureVideoDataOutput?
     private var sessionQueue: DispatchQueue!
+    
+    public var imageEncodingFormat: UTType = .jpeg
     
     private var allCaptureDevices: [AVCaptureDevice] {
         AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTrueDepthCamera, .builtInDualCamera, .builtInDualWideCamera, .builtInWideAngleCamera, .builtInUltraWideCamera], mediaType: .video, position: .unspecified).devices
@@ -300,9 +303,19 @@ class Camera: NSObject {
         guard let rawData = photo.fileDataRepresentation() else { return }
         
         let image = UIImage(data: rawData)
-        let jpegData = image!.jpegData(compressionQuality: 0.8)!
+        var imageData = Data()
+
+        switch self.imageEncodingFormat {
+        case .png:
+            imageData = image!.pngData()!
+        case .jpeg:
+            imageData = image!.jpegData(compressionQuality: 1.0)!
+        default:
+            break
+        }
         
-        print(jpegData)
+        print(imageData)
+
     }
     
     func takePhoto() {
